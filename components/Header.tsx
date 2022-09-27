@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 
 type Props = {};
@@ -6,7 +7,22 @@ type Props = {};
 const Header = (props: Props) => {
   return (
     <header className="p-5 sticky top-0 flex items-start justify-between max-w-3xl mx-auto z-20 xl:items-center">
-      <div className="flex flex-row items-center">
+      <motion.div
+        initial={{
+          x: -500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center"
+      >
         {/* social icon */}
         <SocialIcon
           url="https://www.linkedin.com/in/rohmat-syamsul-huda-70935619b"
@@ -23,9 +39,24 @@ const Header = (props: Props) => {
           fgColor="gray"
           bgColor="transparent"
         />
-      </div>
+      </motion.div>
 
-      <div className="flex flex-row items-center text-gray-300 cursor-pointer">
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-row items-center text-gray-300 cursor-pointer"
+      >
         <SocialIcon
           className="cursor-pointer"
           network="email"
@@ -35,7 +66,7 @@ const Header = (props: Props) => {
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
           Get In Touch
         </p>
-      </div>
+      </motion.div>
     </header>
   );
 };
