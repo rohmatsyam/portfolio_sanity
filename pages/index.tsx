@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../components/Header";
+import { Header, Hero } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="bg-[rgb(36,36,36)] text-white h-screen">
       <Head>
         <title>Rohmat Portfolio</title>
       </Head>
@@ -13,6 +13,9 @@ const Home: NextPage = () => {
       <Header />
 
       {/* Hero */}
+      <section id="hero">
+        <Hero />
+      </section>
 
       {/* About */}
 
