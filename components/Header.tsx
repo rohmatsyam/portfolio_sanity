@@ -6,7 +6,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className="p-5 sticky top-0 flex items-start justify-between max-w-3xl mx-auto z-20 xl:items-center">
+    <header className="sticky top-0 z-20 flex items-start justify-between max-w-3xl p-5 mx-auto xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -28,16 +28,29 @@ const Header = (props: Props) => {
           url="https://www.linkedin.com/in/rohmat-syamsul-huda-70935619b"
           fgColor="gray"
           bgColor="transparent"
+          target="_blank"
+          rel="noopener noreferrer"
         />
         <SocialIcon
-          url="https://www.linkedin.com/in/rohmat-syamsul-huda-70935619b"
+          url="https://github.com/rohmatsyam"
           fgColor="gray"
           bgColor="transparent"
+          target="_blank"
+          rel="noopener noreferrer"
         />
         <SocialIcon
-          url="https://www.linkedin.com/in/rohmat-syamsul-huda-70935619b"
+          url="https://www.instagram.com/rohmat_syam"
           fgColor="gray"
           bgColor="transparent"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+        <SocialIcon
+          url="https://twitter.com/rohmat_syam"
+          fgColor="gray"
+          bgColor="transparent"
+          target="_blank"
+          rel="noopener noreferrer"
         />
       </motion.div>
 
@@ -62,8 +75,9 @@ const Header = (props: Props) => {
           network="email"
           fgColor="gray"
           bgColor="transparent"
+          onClick={() => window.open("mailto:rohmatsyam@yahoo.com")}
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="hidden text-sm text-gray-400 uppercase md:inline-flex">
           Get In Touch
         </p>
       </motion.div>

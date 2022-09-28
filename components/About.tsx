@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {};
 
 const About = (props: Props) => {
   return (
     <div className="relative flex flex-col items-center h-screen max-w-3xl px-10 mx-auto text-center justify-evenly md:text-left md:flex-row">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl text-center">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
@@ -35,9 +36,15 @@ const About = (props: Props) => {
         <p className="text-sm">
           Four-year informatics engineering. My passion for learn programming
           language brought me to{" "}
-          <span className="underline decoration-[#57AB0A]/50">
-            Universitas Nusantara PGRI Kediri
-          </span>
+          <a
+            href="https://goo.gl/maps/RPs9qbgCoRCqsrCh9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="underline decoration-[#57AB0A]/50">
+              Universitas Nusantara PGRI Kediri
+            </span>
+          </a>
           .
           <br />
           <br />
