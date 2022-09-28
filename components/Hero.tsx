@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
     delaySpeed: 2000,
   });
   return (
-    <div className="flex flex-col items-center justify-center h-screen space-y-4 overflow-hidden text-center">
+    <div className="flex flex-col items-center justify-center h-screen pt-16 space-y-4 overflow-hidden text-center">
       <BackgroundCircles />
       <div className="relative object-cover w-32 h-32 mx-auto rounded-full">
         <Image src={profilePic} alt="photo" layout="fill" />
@@ -27,7 +27,7 @@ const Hero = (props: Props) => {
         <h2 className="pb-2 text-sm tracking-[10px] text-gray-500 uppercase">
           Web Developer
         </h2>
-        <h1 className="px-10 text-2xl font-semibold lg:text-3xl">
+        <h1 className="px-10 text-2xl font-semibold md:text-3xl">
           <span className="mr-3">{text}</span>
           <Cursor />
         </h1>
