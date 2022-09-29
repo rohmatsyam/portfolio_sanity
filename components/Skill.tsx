@@ -15,7 +15,7 @@ const Skill = ({ directionLeft }: Props) => {
         }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
-        src="/img/javascript.png"
+        src="/img/js.png"
         className="object-cover w-16 h-16 transition duration-300 ease-in-out border border-gray-500 rounded-full md:w-24 md:h-24 filter group-hover:grayscale"
       />
       <div className="absolute z-0 w-16 h-16 transition duration-300 ease-in-out rounded-full opacity-0 group-hover:opacity-80 group-hover:bg-white md:w-24 md:h-24">

@@ -1,10 +1,18 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { About, Header, Hero, Skills, WorkExperience } from "../components";
+import {
+  About,
+  ContactMe,
+  Header,
+  Hero,
+  Projects,
+  Skills,
+  WorkExperience,
+} from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-x-hidden">
       <Head>
         <title>Rohmat Portfolio</title>
         <link rel="shortcut icon" href="/logo.png" />
@@ -34,8 +42,14 @@ const Home: NextPage = () => {
       </section>
 
       {/* Project */}
+      <section id="projects" className="snap-center">
+        <Projects />
+      </section>
 
       {/* Contact me */}
+      <section id="contact" className="snap-end">
+        <ContactMe />
+      </section>
     </div>
   );
 };

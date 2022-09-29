@@ -30,7 +30,7 @@ const About = (props: Props) => {
       <div className="px-0 space-y-2 md:px-10">
         <h4 className="text-2xl font-semibold md:text-3xl">
           Here is a{" "}
-          <span className="underline decoration-[#57AB0A]/50">little</span>{" "}
+          <span className="underline decoration-[#FFD600]">little</span>{" "}
           background
         </h4>
         <p className="text-sm">
@@ -41,7 +41,7 @@ const About = (props: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="underline decoration-[#57AB0A]/50">
+            <span className="underline decoration-[#FFD600]">
               Universitas Nusantara PGRI Kediri
             </span>
           </a>
@@ -49,8 +49,8 @@ const About = (props: Props) => {
           <br />
           <br />
           Currently, I focus on Javascript Web development{" "}
-          <span className="underline decoration-[#57AB0A]/50"> (Next.js)</span>.
-          I also familiar with Python, Java and Go programming language.
+          <span className="underline decoration-[#FFD600]"> (Next.js)</span>. I
+          also familiar with Python, Java and Go programming language.
         </p>
       </div>
     </div>

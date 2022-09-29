@@ -31,7 +31,7 @@ const Hero = (props: Props) => {
           <span className="mr-1">{text}</span>
           <Cursor />
         </h1>
-        <div className="pt-5">
+        <div className="pt-5 space-x-2">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
@@ -41,8 +41,8 @@ const Hero = (props: Props) => {
           <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="#project">
-            <button className="heroButton">Project</button>
+          <Link href="#projects">
+            <button className="heroButton">Projects</button>
           </Link>
         </div>
       </div>
