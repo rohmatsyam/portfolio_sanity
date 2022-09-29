@@ -12,22 +12,17 @@ const WorkExperience = (props: Props) => {
       transition={{ duration: 1.5 }}
       className="relative h-screen max-w-screen"
     >
-      <div className="absolute grid items-center justify-center w-full grid-cols-1 gap-4 top-24">
+      <div className="absolute grid items-center justify-center w-full grid-cols-1 gap-4 top-20">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl text-center">
           Experience
         </h3>
-        <div className="z-20 flex max-w-3xl ml-10 space-x-5 overflow-x-scroll overflow-y-hidden md:mx-auto snap-x snap-mandatory">
+        <div className="z-20 flex max-w-3xl p-2 mx-10 space-x-5 overflow-x-scroll overflow-y-hidden md:mx-auto snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600]">
           <ExperienceCard />
           <ExperienceCard />
           <ExperienceCard />
           <ExperienceCard />
         </div>
       </div>
-      {/* <div className="absolute flex w-full mt-24 space-x-5 overflow-x-scroll top-12 snap-x snap-mandatory pl-14 md:pl-0">
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-      </div> */}
     </motion.div>
   );
 };

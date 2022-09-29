@@ -12,11 +12,11 @@ const Projects = (props: Props) => {
       transition={{ duration: 1.5 }}
       className="relative h-screen max-w-screen"
     >
-      <div className="absolute grid items-center justify-center w-full grid-cols-1 gap-4 top-24">
+      <div className="absolute grid items-center justify-center w-full grid-cols-1 gap-4 top-20">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl text-center">
           Projects
         </h3>
-        <div className="z-20 flex min-h-[480px] overflow-x-scroll overflow-y-hidden snap-x snap-mandatory">
+        <div className="z-20 flex min-h-[495px] overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600] scrollbar-thin">
           {projects.map((project, index) => (
             <div
               key={index}
