@@ -5,7 +5,7 @@ type Props = {};
 
 const ExperienceCard = (props: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[300px] snap-center p-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[300px] snap-center p-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden min-h-[400px]">
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
@@ -37,19 +37,19 @@ const ExperienceCard = (props: Props) => {
         <p className="py-1 text-sm text-gray-100 uppercase">
           20 Agustus - 14 Agustus 2022
         </p>
-        <p className="text-sm">
+        {/* <p className="text-sm">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
           consequatur sint minima explicabo quos nulla, cupiditate, a velit
           deleniti, rem odit atque nihil possimus nostrum! Minima nisi assumenda
           totam. Laudantium.
-        </p>
-        {/* <ul className="ml-5 space-y-1 text-sm list-disc">
+        </p> */}
+        <ul className="ml-5 space-y-1 text-sm list-disc">
           <li>Summary point</li>
           <li>Summary point</li>
           <li>Summary point</li>
           <li>Summary point</li>
           <li>Summary point</li>
-        </ul> */}
+        </ul>
       </div>
     </article>
   );
