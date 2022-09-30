@@ -33,7 +33,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600]">
       <Head>
-        <title>Rohmat Portfolio</title>
+        <title>{pageInfo?.name} || Portfolio</title>
         <link rel="shortcut icon" href="/logo.png" />
       </Head>
 
