@@ -5,7 +5,7 @@ interface SanityBody {
   _updatedAt: string;
 }
 
-interface image {
+interface Image {
   _type: "image";
   _ref: string;
   _type: "reference";
