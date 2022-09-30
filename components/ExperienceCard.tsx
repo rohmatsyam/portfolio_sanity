@@ -1,53 +1,60 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Experience } from "../typings";
+import { urlFor } from "../sanity";
+import moment from "moment";
 
-type Props = {};
+type Props = {
+  experience: Experience;
+};
 
-const ExperienceCard = (props: Props) => {
+const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[300px] snap-center p-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden min-h-[400px]">
+    <motion.article
+      initial={{
+        x: 200,
+        opacity: 0,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+      }}
+      className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[300px] snap-center p-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden min-h-[400px]"
+    >
       <img
         className="object-cover object-center w-16 h-16 rounded-full"
-        src="/img/km.png"
+        src={urlFor(experience?.companyImage).url()}
+        alt="companyImg"
       />
       <div className="px-0">
-        <h3 className="text-lg font-light">Kampus Merdeka</h3>
-        <p className="mt-1 text-xl font-bold">Sekolah Ekspor</p>
+        <h3 className="text-lg font-light">{experience?.company}</h3>
+        <p className="mt-1 text-xl font-bold">{experience?.jobTitle}</p>
         <div className="flex my-1 space-x-1">
-          <img
-            className="w-8 h-8 rounded-full"
-            src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-            alt=""
-          />
-          <img
-            className="w-8 h-8 rounded-full"
-            src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-            alt=""
-          />
-          <img
-            className="w-8 h-8 rounded-full"
-            src="https://cdn.sanity.io/images/ltuexkre/production/2a67945990f9c2ef568cf7e8483c1a8174556463-500x500.png"
-            alt=""
-          />
+          {experience?.technologies.map((tech) => (
+            <img
+              key={tech._id}
+              className="w-8 h-8 rounded-full"
+              src={urlFor(tech.image).url()}
+              alt=""
+            />
+          ))}
         </div>
         <p className="py-1 text-sm text-gray-100 uppercase">
-          20 Agustus - 14 Agustus 2022
+          {moment(experience?.dateStarted).format("Do MMM")} -{" "}
+          {experience.isCurrentlyWorkingHere
+            ? "Present"
+            : moment(experience?.dateEnded).format("Do MMM YYYY")}
         </p>
-        {/* <p className="text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-          consequatur sint minima explicabo quos nulla, cupiditate, a velit
-          deleniti, rem odit atque nihil possimus nostrum! Minima nisi assumenda
-          totam. Laudantium.
-        </p> */}
         <ul className="ml-5 space-y-1 text-sm list-disc">
-          <li>Summary point</li>
-          <li>Summary point</li>
-          <li>Summary point</li>
-          <li>Summary point</li>
-          <li>Summary point</li>
+          {experience.points.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
         </ul>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

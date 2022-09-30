@@ -22,7 +22,7 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
 
 type Props = {
-  pageInfo: PageInfo[];
+  pageInfo: PageInfo;
   experiences: Experience[];
   skills: Skill[];
   projects: Project[];
@@ -38,36 +38,36 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </Head>
 
       {/* Header */}
-      <Header />
+      <Header socials={socials} />
 
       {/* Hero */}
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
 
       {/* Skills */}
       <section id="skills" className="snap-center">
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
       {/* Project */}
       <section id="projects" className="snap-center">
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* Contact me */}
       <section id="contact" className="snap-end">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       <Link href="#hero">
@@ -75,7 +75,6 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
           <div className="">
             <img
               src="/img/home.png"
-              alt=""
               className="w-10 h-10 bg-black rounded-full cursor-pointer grayscale hover:grayscale-0"
             />
           </div>
@@ -90,7 +89,7 @@ export default Home;
 export const getStaticProps: GetStaticProps<Props> = async (
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<Props>> => {
-  const pageInfo: PageInfo[] = await fetchPageInfo();
+  const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperience();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();

@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
+import { Social } from "../typings";
 
-type Props = {};
+type Props = {
+  socials: Social[];
+};
 
-const Header = (props: Props) => {
+const Header = ({ socials }: Props) => {
   return (
     <header className="sticky top-0 z-20 flex items-start justify-between max-w-3xl p-2 mx-4 md:mx-auto md:p-4 xl:items-center">
       <motion.div
@@ -25,34 +28,16 @@ const Header = (props: Props) => {
         className="flex flex-row items-center"
       >
         {/* social icon */}
-        <SocialIcon
-          url="https://www.linkedin.com/in/rohmat-syamsul-huda-70935619b"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-        <SocialIcon
-          url="https://github.com/rohmatsyam"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-        <SocialIcon
-          url="https://www.instagram.com/rohmat_syam"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-        <SocialIcon
-          url="https://twitter.com/rohmat_syam"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
+        {socials.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url}
+            fgColor="gray"
+            bgColor="transparent"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        ))}
       </motion.div>
 
       <Link href="#contact">
