@@ -2,7 +2,6 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
-import profilePic from "../public/img/rohmat.png";
 import Link from "next/link";
 
 type Props = {};
@@ -21,7 +20,7 @@ const Hero = (props: Props) => {
     <div className="flex flex-col items-center justify-center h-screen pt-20 space-y-8 overflow-hidden text-center">
       <BackgroundCircles />
       <div className="relative object-cover mx-auto rounded-full w-36 h-36">
-        <Image src={profilePic} alt="photo" layout="fill" />
+        <Image src="" alt="photo" layout="fill" />
       </div>
       <div className="z-20">
         <h2 className="pb-2 text-sm tracking-[10px] text-gray-500 uppercase">
