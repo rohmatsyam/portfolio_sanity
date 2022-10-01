@@ -2,6 +2,9 @@ import type {
   GetServerSideProps,
   GetServerSidePropsContext,
   GetServerSidePropsResult,
+  GetStaticProps,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
 } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -86,9 +89,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context: GetServerSidePropsContext
-): Promise<GetServerSidePropsResult<Props>> => {
+export const getStaticProps: GetStaticProps<Props> = async (
+  context: GetStaticPropsContext
+): Promise<GetStaticPropsResult<Props>> => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperience();
   const skills: Skill[] = await fetchSkills();
@@ -103,5 +106,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
       projects,
       socials,
     },
+    revalidate: 10,
   };
 };
