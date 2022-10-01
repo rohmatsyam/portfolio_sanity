@@ -1,11 +1,8 @@
+import { assetPrefix } from "../next.config";
 import { Skill } from "../typings";
 
 export const fetchSkills = async () => {
-  const baseURL =
-    process.env.NODE_ENV === "production"
-      ? process.env.VERCEL_URL
-      : "http://localhost:3000";
-  const res = await fetch(`${baseURL}/api/getSkills`);
+  const res = await fetch(`${assetPrefix}/api/getSkills`);
 
   const data = await res.json();
   const skills: Skill[] = data.skills;

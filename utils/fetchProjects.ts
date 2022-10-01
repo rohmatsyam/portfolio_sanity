@@ -1,11 +1,8 @@
 import { Project } from "../typings";
+import { assetPrefix } from "../next.config";
 
 export const fetchProjects = async () => {
-  const baseURL =
-    process.env.NODE_ENV === "production"
-      ? process.env.VERCEL_URL
-      : "http://localhost:3000";
-  const res = await fetch(`${baseURL}/api/getProjects`);
+  const res = await fetch(`${assetPrefix}/api/getProjects`);
 
   const data = await res.json();
   const projects: Project[] = data.projects;
