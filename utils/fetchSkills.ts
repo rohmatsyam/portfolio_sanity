@@ -9,3 +9,5 @@ export const fetchSkills = async () => {
 
   return skills;
 };
+
+export default fetchSkills;

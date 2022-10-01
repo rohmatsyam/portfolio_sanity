@@ -9,3 +9,5 @@ export const fetchSocials = async () => {
 
   return socials;
 };
+
+export default fetchSocials;

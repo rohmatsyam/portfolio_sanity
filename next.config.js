@@ -6,7 +6,9 @@ const nextConfig = {
   images: {
     domains: ["cdn.sanity.io"],
   },
-  assetPrefix: isProd ? process.env.VERCEL_URL : "http://localhost:3000",
+  assetPrefix: isProd
+    ? "https://portfolio-sanity-rohmat.vercel.app"
+    : "http://localhost:3000",
 };
 
 module.exports = nextConfig;

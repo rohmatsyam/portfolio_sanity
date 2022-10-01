@@ -9,3 +9,5 @@ export const fetchProjects = async () => {
 
   return projects;
 };
+
+export default fetchProjects;

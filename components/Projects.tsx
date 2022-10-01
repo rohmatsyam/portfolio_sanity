@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Project } from "../typings";
 import { urlFor } from "../sanity";
+import Image from "next/image";
 
 type Props = {
   projects: Project[];
@@ -37,7 +38,7 @@ const Projects = ({ projects }: Props) => {
               <img
                 src={urlFor(project.image).url()}
                 alt="Project"
-                className="w-96 md:w-[40%]"
+                className="w-96 md:w-[40%] max-h-fit"
               />
               <div className="max-w-3xl px-0 space-y-2 md:px-10">
                 <h4 className="text-xl font-semibold text-center">

@@ -9,3 +9,5 @@ export const fetchPageInfo = async () => {
 
   return pageInfo;
 };
+
+export default fetchPageInfo;

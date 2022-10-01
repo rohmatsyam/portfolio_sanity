@@ -1,7 +1,4 @@
 import type {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetServerSidePropsResult,
   GetStaticProps,
   GetStaticPropsContext,
   GetStaticPropsResult,
@@ -18,11 +15,14 @@ import {
   Skills,
   WorkExperience,
 } from "../components";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
-import { fetchExperience } from "../utils/fetchExperience";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchProjects } from "../utils/fetchProjects";
-import { fetchSocials } from "../utils/fetchSocials";
+import {
+  fetchExperience,
+  fetchPageInfo,
+  fetchProjects,
+  fetchSkills,
+  fetchSocials,
+} from "../utils";
+import Image from "next/image";
 
 type Props = {
   pageInfo: PageInfo;
@@ -75,11 +75,8 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       <Link href="#hero">
         <footer className="sticky z-50 w-[50px] cursor-pointer bottom-5 mx-auto">
-          <div className="">
-            <img
-              src="/img/home.png"
-              className="w-10 h-10 bg-black rounded-full cursor-pointer grayscale hover:grayscale-0"
-            />
+          <div className="w-10 h-10 bg-black rounded-full cursor-pointer grayscale hover:grayscale-0">
+            <Image src="/img/home.png" alt="Home" layout="fill" />
           </div>
         </footer>
       </Link>
