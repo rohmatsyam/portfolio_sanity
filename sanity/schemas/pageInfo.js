@@ -22,6 +22,14 @@ export default {
       },
     },
     {
+      name: "homePic",
+      title: "homePic",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: "backgroundInformation",
       title: "BackgroundInformation",
       type: "string",

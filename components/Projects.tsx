@@ -11,8 +11,8 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   return (
-    <div className="relative h-screen max-w-screen">
-      <div className="absolute grid items-center justify-center w-full grid-cols-1 gap-4 top-20">
+    <div className="relative flex items-center h-screen max-w-screen">
+      <div className="grid items-center justify-center w-full grid-cols-1 gap-4">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl text-center">
           Projects
         </h3>
@@ -28,7 +28,8 @@ const Projects = ({ projects }: Props) => {
             x: 0,
             opacity: 1,
           }}
-          className="z-20 flex min-h-[495px] overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600] scrollbar-thin"
+          viewport={{ once: true }}
+          className="z-20 flex min-h-[380px] overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600] scrollbar-thin"
         >
           {projects.map((project, index) => (
             <div
@@ -38,7 +39,8 @@ const Projects = ({ projects }: Props) => {
               <img
                 src={urlFor(project.image).url()}
                 alt="Project"
-                className="w-96 md:w-[40%] max-h-fit"
+                className="w-[80%] max-w-md md:max-w-xl"
+                // className="w-96 md:w-[50%] max-h-fit"
               />
               <div className="max-w-3xl px-0 space-y-2 md:px-10">
                 <h4 className="text-xl font-semibold text-center">

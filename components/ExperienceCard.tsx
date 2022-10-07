@@ -23,7 +23,8 @@ const ExperienceCard = ({ experience }: Props) => {
         x: 0,
         opacity: 1,
       }}
-      className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[300px] snap-center p-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden min-h-[400px]"
+      viewport={{ once: true }}
+      className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[300px] snap-center p-5 bg-[#292929] hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden min-h-[350px]"
     >
       <div className="w-16 h-16 rounded-full">
         <Image

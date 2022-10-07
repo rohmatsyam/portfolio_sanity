@@ -8,8 +8,8 @@ type Props = {
 
 const WorkExperience = ({ experiences }: Props) => {
   return (
-    <div className="relative h-screen max-w-screen">
-      <div className="absolute grid items-center justify-center w-full grid-cols-1 gap-4 top-20">
+    <div className="relative flex items-center h-screen max-w-screen">
+      <div className="grid items-center justify-center w-full grid-cols-1 gap-4 top-20">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl text-center">
           Experience
         </h3>

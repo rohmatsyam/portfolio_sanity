@@ -10,7 +10,7 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className="sticky top-0 z-20 flex items-start justify-between max-w-3xl p-2 mx-4 md:mx-auto md:p-4 xl:items-center">
+    <header className="sticky top-[3%] md:top-[2%] z-50 flex items-start justify-between max-w-3xl p-6 mx-auto md:p-4 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -36,6 +36,7 @@ const Header = ({ socials }: Props) => {
             bgColor="transparent"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ height: 60, width: 60 }}
           />
         ))}
       </motion.div>
@@ -62,6 +63,7 @@ const Header = ({ socials }: Props) => {
             network="email"
             fgColor="gray"
             bgColor="transparent"
+            style={{ height: 60, width: 60 }}
           />
           <p className="hidden text-sm text-gray-400 uppercase md:inline-flex">
             Get In Touch
