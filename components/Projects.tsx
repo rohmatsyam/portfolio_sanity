@@ -12,7 +12,7 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   return (
     <div className="relative flex items-center h-screen max-w-screen">
-      <div className="grid items-center justify-center w-full grid-cols-1 gap-4">
+      <div className="grid items-center justify-center w-full grid-cols-1 gap-4 md:gap-2">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl text-center">
           Projects
         </h3>
@@ -29,7 +29,7 @@ const Projects = ({ projects }: Props) => {
             opacity: 1,
           }}
           viewport={{ once: true }}
-          className="z-20 flex min-h-[380px] overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600] scrollbar-thin"
+          className="z-20 flex min-h-[400px] overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-track-gray-400/20 scrollbar-thumb-[#FFD600] scrollbar-thin"
         >
           {projects.map((project, index) => (
             <div
@@ -61,7 +61,7 @@ const Projects = ({ projects }: Props) => {
                     />
                   ))}
                 </div>
-                <p className="mx-10 text-sm text-center md:mx-20 md:text-left">
+                <p className="mx-8 text-base text-center md:mx-14 md:text-left">
                   {project.summary}
                 </p>
               </div>

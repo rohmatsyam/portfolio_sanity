@@ -22,7 +22,7 @@ const Skill = ({ skill, directionLeft }: Props) => {
         src={urlFor(skill?.image).url()}
         className="object-cover w-20 h-20 transition duration-300 ease-in-out border border-gray-500 rounded-full md:w-24 md:h-24 filter group-hover:grayscale"
       />
-      <div className="absolute z-0 w-20 h-20 transition duration-300 ease-in-out rounded-full opacity-0 group-hover:opacity-80 group-hover:bg-white md:w-24 md:h-24">
+      <div className="absolute z-20 w-20 h-20 transition duration-300 ease-in-out rounded-full opacity-0 group-hover:opacity-80 group-hover:bg-white md:w-24 md:h-24">
         <div className="flex items-center justify-center h-full">
           <p className="text-2xl font-bold text-black opacity-100">
             {skill?.progress}

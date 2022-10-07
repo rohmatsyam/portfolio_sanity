@@ -80,7 +80,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </section>
 
       <Link href="#hero">
-        <footer className="sticky z-50 w-[50px] cursor-pointer bottom-5 mx-auto">
+        <footer className="sticky z-50 w-[50px] cursor-pointer bottom-[5%] mx-auto">
           <div className="w-10 h-10 bg-black rounded-full cursor-pointer grayscale hover:grayscale-0">
             <Image
               src={urlFor(pageInfo.homePic).url()}

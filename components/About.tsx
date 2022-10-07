@@ -31,7 +31,7 @@ const About = ({ pageInfo }: Props) => {
               viewport={{ once: true }}
               src={urlFor(pageInfo?.profilePic).url()}
               // className="object-cover w-32 h-32 rounded-full -mb-28 md:mb-0 md:rounded-lg md:w-56 md:h-72"
-              className="object-cover w-32 h-32 rounded-full md:rounded-lg md:w-52 md:h-64"
+              className="object-cover w-40 h-40 rounded-full md:rounded-lg md:w-52 md:h-64"
             />
           </div>
           <div className="grid md:justify-start md:col-span-2 md:ml-3">
