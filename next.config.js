@@ -7,7 +7,7 @@ const nextConfig = {
     domains: ["cdn.sanity.io"],
   },
   assetPrefix: isProd
-    ? "https://portfolio-sanity-rohmat.vercel.app"
+    ? "https://portfolio-rohmat.vercel.app"
     : "http://localhost:3000",
 };
 
